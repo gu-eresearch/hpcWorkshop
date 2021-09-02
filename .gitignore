@@ -10,3 +10,8 @@ vendor/
 
 # Ignore mac files 
 .DS_Store
+
+# Ingore lessons
+36-using-windows-software.md
+34-parralelisation.md
+35-optimisation.md
