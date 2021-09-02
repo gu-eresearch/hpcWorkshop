@@ -19,7 +19,6 @@ title-icon: fas fa-code
 # these do not visibility appear on the pages, but used for SEO
 description: "Workshop about dedicated to using Griffith University HPC"
 keywords: "HPC, Griffith University"
-featured-image: "/images/uidaho-workshop.jpg"
 # add search box to footer? true/false
 search: true
 
@@ -30,7 +29,7 @@ github_username: BrettParker
 # year or date published
 pub_year: 2021
 # location of code, the full url to your github repository
-source-code: https://github.com/evanwill/workshop-template-b
+source-code: https://gu-eresearch.github.io/hpcWorkshop/
 
 ##########
 # URL VARIABLES [optional!]
