@@ -1,6 +1,6 @@
 ---
 title: Uploading and downloading files to and from a HPC
-nav: Uploading and downloading files to and from a HPC
+nav: Transfer files
 ---
 
 We'll cover several methods for uploading and downloading files and directories to the HPC. We will use UNIX commands in a shell, terminal (mac), gitbash (windows). In the next lesson we will learn how to use the graphical user interface (GUI, i.e. a point and click program) program WinScp. This may be easier to for with limited bash experience.

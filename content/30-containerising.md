@@ -1,6 +1,6 @@
 ---
 title: Containerisation for HPC
-nav: Containerisation for HPC
+nav: Containerisation
 ---
 
 ## What is containerisation, and why is it amazing?

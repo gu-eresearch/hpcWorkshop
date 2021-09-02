@@ -1,6 +1,6 @@
 ---
 title: Containerisation practice
-nav: Containerisation practice
+nav: Containerisation 1
 ---
 
 Lets build an image to run the following python script on the HPC. You will need to pull the latest python image, you also need to install the pandas and numpy packages to run the following script.

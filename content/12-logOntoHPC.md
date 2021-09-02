@@ -1,6 +1,6 @@
 ---
 title: Log onto a HPC
-nav: Log onto a HPC
+nav: Login
 ---
 ## What is a HPC made up of? 
 

@@ -1,6 +1,6 @@
 ---
 title: Introduction to High Performance Computing
-nav: Introduction to High Performance Computing
+nav: Intro
 ---
 
 ## What is a High Performance Computation?

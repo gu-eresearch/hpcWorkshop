@@ -1,6 +1,6 @@
 ---
 title: Using resources effectively
-nav: Using resources effectively
+nav: Resources
 ---
 
 We now know virtually everything we need to know about getting stuff on a HPC.

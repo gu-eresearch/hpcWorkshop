@@ -1,6 +1,6 @@
 ---
 title: Using emulators to login and transfer files to a HPC
-nav: Using emulators to login and transfer files to a HPC
+nav: GUI
 ---
 
 ## What is an emulator

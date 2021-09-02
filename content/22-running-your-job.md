@@ -1,6 +1,6 @@
 ---
 title: Running and querying your job
-nav: Running and querying your job
+nav: Running jobs
 ---
 
 ## Submitting a job

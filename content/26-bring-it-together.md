@@ -1,6 +1,6 @@
 ---
 title: Bringing it all together
-nav: Bringing it all together
+nav: Overview
 ---
 
 ## Some tips and tricks before you get started
