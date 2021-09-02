@@ -3,7 +3,7 @@ title: Home
 layout: default
 ---
 
-# Bootstrap Workshop Template!
+#  Moving to Bigger Compute Power, How to HPC
 
 Are you running analysis on your computer that is taking far to long?
 Is your analysis using all of your computers memory and storage?
@@ -11,7 +11,7 @@ Has someone recommended that you should use a HPC or cloud to run your analysis?
 Yes.... Then you have come to the right place!!! 
 Griffith University has an in-house High Performance Computing Environment (HPC) avaliable to all Griffith Researchers and HDR students. HPC are supercomputers that can be used to run analysis at a fraction of the time it would take on your personal computer. The first HPC was developed in 1976, now, they are integral pieces of infrastructure found at most Universities and throughout Industry and government. This tutorial is specific to the Griffith HPC, however, many other HPC's work in a very similar fashion.
 
-# IMPORTANT
+## IMPORTANT
 
 If you are using the Griffith Wireless network you must be logged in with Griffith's VPN to use the HPC. More information about downloading and using <a href="https://intranet.secure.griffith.edu.au/computing/remote-access/virtual-private-network" target="_blank">Griffith's VPN</a>
 
