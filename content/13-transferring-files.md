@@ -10,11 +10,7 @@ On the HPC you will have a home directory with 500GB of allocated space. If you 
 
 The data that you generate on the HPC is not backed up, so you should save it somewhere else such as on <a href="https://www.griffith.edu.au/digital-solutions/research-storage" target="_blank">research space</a>
 
-The file structure within Griffith's HPC is shown below. A HPC is a shared resource, you can access other peoples folders, so be very carefully that you are working in your home folder.
-
-![folder structure](../images/HPCFolderStructure.jpg)
-
-You want to be working within your home directory which will look like this `[s1234567@gc-prd-hpclogin1 ~]$`. If you use the UNIX pwd (print working directory) command it will look like this `/export/home/s1234567`. Use `cd ~` to get back to your home directory.
+A HPC is a shared resource, you can access other peoples folders, so be very carefully that you are working in your home folder. You want to be working within your home directory which will look like this `[s1234567@gc-prd-hpclogin1 ~]$`. If you use the UNIX pwd (print working directory) command it will look like this `/export/home/s1234567`. Use `cd ~` to get back to your home directory.
 
 ## Whats on my HPC space
 Make sure your terminal is logged into the HPC. Before uploading files we need to check that we are in our home directory on the HPC. Use the `pwd` UNIX command to identify your current directory.
