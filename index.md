@@ -18,6 +18,6 @@ If you are using the Griffith Wireless network you must be logged in with Griffi
 ## Griffith HPC Support Request Form
 
 You may use this <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=q8h8Wtykm0-_YGZxQEmtYhZRHEbGuutOhsLljzWVJ1JUQlRTM0lTV0o0TFozWjlVMTQ5TVU0WjhBSC4u" target="_blank">link</a> to lodge a support request (e.g request a new account, issues with applications, installation requests etc)  for the new Griffith HPC. You will need to log into Microsoft forms with your Griffith email address to access this form.
-------
+
 
 {% include template/credits.html %}
