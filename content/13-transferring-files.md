@@ -12,6 +12,46 @@ The data that you generate on the HPC is not backed up, so you should save it so
 
 A HPC is a shared resource, you can access other peoples folders, so be very carefully that you are working in your home folder. You want to be working within your home directory which will look like this `[s1234567@gc-prd-hpclogin1 ~]$`. If you use the UNIX pwd (print working directory) command it will look like this `/export/home/s1234567`. Use `cd ~` to get back to your home directory.
 
+## Data storage on your account
+
+You are assigned 200GB of storage. You can temporarily exceed this quota, but will need to remove excess data once you have finished using it. 
+To see how much storage you have used run the command du -kh. This will print out the usage for all root folders.
+```bash
+[s1234567@gc-prd-hpclogin1 ~]$ du -kh ~
+0	    /export/home/s5001793/.gnome2
+0	    /export/home/s5001793/.mozilla/extensions
+0	    /export/home/s5001793/.mozilla/plugins
+0	    /export/home/s5001793/.mozilla
+24K	    /export/home/s5001793/.ssh
+24K	    /export/home/s5001793/parallel/Meta
+56K	    /export/home/s5001793/parallel/R
+336K	/export/home/s5001793/parallel/doc
+52K	    /export/home/s5001793/parallel/help
+0	    /export/home/s5001793/sw/Modules
+0	    /export/home/s5001793/sw
+296K	/export/home/s5001793/test/test
+2.7M	/export/home/s5001793/test
+0	    /export/home/s5001793/data
+16K	    /export/home/s5001793/workshop
+4.0K	/export/home/s5001793/.elinks
+16M	    /export/home/s5001793
+```
+
+To print the total usage for all files add the -s.
+
+```bash
+[s1234567@gc-prd-hpclogin1 ~]$ du -khs ~
+5.3M    /export/home/s1234567
+```
+
+To check the usage of a specific folder, replace ~ with the directory of interest.
+```bash
+[s1234567@gc-prd-hpclogin1 ~]$ du -kh /export/home/s1234567/mpi
+16K     /export/home/s1234567/mpi
+```
+
+To remove data use the remove `rm` command, followed by the file. If you want to remove a directory add `-r` flag after `rm`.
+
 ## Whats on my HPC space
 Make sure your terminal is logged into the HPC. Before uploading files we need to check that we are in our home directory on the HPC. Use the `pwd` UNIX command to identify your current directory.
 
@@ -287,31 +327,3 @@ data/resources.md              100% 1115    29.9KB/s   00:00
 {: .output}
 
 To quit, we type `exit` or `bye`. 
-
-## Data storage on your account
-
-You are assigned 200GB of storage. You can temporarily exceed this quota, but will need to remove excess data once you have finished using it. 
-To see how much storage you have used run the command du -kh.
-```
-[s1234567@gc-prd-hpclogin1 ~]$ du -kh ~
-0	    /export/home/s5001793/.gnome2
-0	    /export/home/s5001793/.mozilla/extensions
-0	    /export/home/s5001793/.mozilla/plugins
-0	    /export/home/s5001793/.mozilla
-24K	    /export/home/s5001793/.ssh
-24K	    /export/home/s5001793/parallel/Meta
-56K	    /export/home/s5001793/parallel/R
-336K	/export/home/s5001793/parallel/doc
-52K	    /export/home/s5001793/parallel/help
-0	    /export/home/s5001793/sw/Modules
-0	    /export/home/s5001793/sw
-296K	/export/home/s5001793/test/test
-2.7M	/export/home/s5001793/test
-0	    /export/home/s5001793/data
-16K	    /export/home/s5001793/workshop
-4.0K	/export/home/s5001793/.elinks
-16M	    /export/home/s5001793
-```
-{: .bash}
-
-To remove data use the remove `rm` command, followed by the file. If you want to remove a directory add `-r` flag after `rm`.
