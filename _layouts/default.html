@@ -2,7 +2,6 @@
 <html lang="en" class="h-100">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   {% include template/head.html %}
-  {% include toc.html %}
   </head>
 
   <body class="d-flex flex-column h-100">
@@ -13,6 +12,7 @@
 
     <main id="maincontent" role="main" aria-label="Content" class="flex-shrink-0">
       <div class="container my-4">
+      {% include toc.html %}
       {{ content }}
       </div>
     </main>
