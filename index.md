@@ -2,7 +2,6 @@
 title: Home
 layout: default
 ---
-{% include toc.html %}
 
 #  Moving to Bigger Compute Power, How to HPC
 
