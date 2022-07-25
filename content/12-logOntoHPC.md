@@ -27,7 +27,7 @@ s1234567@PC12345 XXXX~$
 ```
 {: .bash}
 
-This part **PC123456 XXXX** indicates that the termianl is logged into your local computer under the user **s1234567**. If your working on a personal computer, and not a university computer then the sNumber will be missing. The `~` indicates that you are in your home directory.
+This part **PC123456 XXXX** indicates that the terminal is logged into your local computer under the user **s1234567**. If your working on a personal computer, and not a university computer then the sNumber will be missing. The `~` indicates that you are in your home directory.
 
 > ## Network addresses: HPC vs your local computer
 > The command prompt is the symbol or series of characters which precedes each shell command, and lets the user know the shell is ready to receive commands. The command prompt echo's the network address that you logged into, by default you will be logged into your local computer, which looks similar to the following `s1234567@PC012345 XXXX:~$`.
@@ -129,7 +129,7 @@ If you entered your password appropriately the network address will change to so
 > {: .bash}
 > > ## Solution
 > > 
-> > Your computer's netork address (presuming you are using a Griffith issued computer)
+> > Your computer's network address (presuming you are using a Griffith issued computer)
 > > ```
 > > s1234567@PC12345 XXXX~$
 > > ```

@@ -5,7 +5,43 @@ nav: GUI
 
 ## What is an emulator
 
-It is strictly speaking not necessary to have a terminal running on your local computer in order to access and use a remote system, only a window into the remote system once connected. Using an emulator can make specific tasks quicker and easier to navigate as it provides an easy to read interface. I would recommend using UNIX commands, ultimately they are quicker. There are many SSH Emulator's available upon searching online. We recommend WinSCP, which we will go through the set-up now.
+## Using putty as a ssh and scp emulator to move files to and from the HPC 
+
+It is strictly speaking not necessary to have a terminal running on your local computer in order to access and use a remote system, only a window into the remote system once connected. PuTTy is likely the oldest, most well-known, and widely used software solution to take this approach. I would recommend using UNIX commands, ultimately they are quicker.
+
+PuTTY is freely available to download from www.putty.org. Download the version that is correct for your operating system and install it as you would other software on you Windows system. Once installed it will be available through the start menu or similar.
+
+Running PuTTY will not initially produce a terminal but instead a window full of connection options. Putting the address of the remote system in the “Host Name (or IP Address)” box and either pressing enter or clicking the “Open” button should begin the connection process.
+
+If this works you will see a terminal window open that prompts you for a username through the “login as:” prompt and then for a password. If both of these are passed correctly then you will be given access to the system and will see a message saying so within the terminal. If you need to escape the authentication process you can hold the control/Ctrl key and press the c key to exit and start again.
+
+Note that you may want to paste in your password rather than typing it. Use control/Ctrl plus a right-click of the mouse to paste content from the clipboard to the PuTTY terminal.
+
+For those logging in with PuTTY it would likely be best to cover the terminal basics already mentioned above before moving on to navigating the remote system. 
+
+Once putty is installed, start putty
+Start ==> All Programs ==> puTTy ==> puTTy
+
+Configure the cluster login node as follows:
+
+Open ssh on the left pane and click on X11 and enable X11 forwarding:
+
+![putty2](../images/putty1.JPG)
+
+Click on Tunnels on the left pane and Enter:
+
+source ports : 5901
+Destination: localhost:5901
+Click Add button
+
+![putty3](../images/putty2.JPG)
+
+Click on Sessions on the left pane and Enter for host name: gc-prd-hpclogin1.rcs.griffith.edu.au
+And for saved session type a name that reminds you of which HPC it is (can be anything alphanumeric, NO spaces). Double click or select Open to connect to the HPC.
+
+![putty4](../images/putty3.JPG)
+
+If you have enabled X11 port forwarding and enabled a local Xming X11 Windows server, type "xclock" and a clock should pop up on your desktop.
 
 
 ## Using WinSCP as a ssh and scp emulator to move files to and from the HPC

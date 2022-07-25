@@ -6,7 +6,7 @@ nav: Transfer files
 We'll cover several methods for uploading and downloading files and directories to the HPC. We will use UNIX commands in a shell, terminal (mac), gitbash (windows). In the next lesson we will learn how to use the graphical user interface (GUI, i.e. a point and click program) program WinScp. This may be easier to for with limited bash experience.
 
 ## File storage on the HPC
-On the HPC you will have a home directory with 500GB of allocated space. If you require more, send a request <a href="https://conf-ers.griffith.edu.au/display/GHCD/Griffith+HPC+Support+Request+Form?src=contextnavpagetreemode" target="_blank">here</a>. 
+On the HPC you will have a home directory with 500GB of allocated space. If you require more, send a request <a href="https://www.griffith.edu.au/eresearch-services/request-help" target="_blank">here</a>. 
 
 The data that you generate on the HPC is not backed up, so you should save it somewhere else such as on <a href="https://www.griffith.edu.au/digital-solutions/research-storage" target="_blank">research space</a>
 
@@ -63,7 +63,7 @@ Make sure your terminal is logged into the HPC. Before uploading files we need t
 
 If you did not get /export/home/s1234567, then you need to change directories.
 
-To change directories use the `cd`command, and to change to your home directory use `~`, which represents your home directory on any UNIX computer.
+To change directories use the `cd` command, and to change to your home directory use `~`, which represents your home directory on any UNIX computer.
 ```
 [s1234567@gc-prd-hpclogin1]$ cd ~
 ```
