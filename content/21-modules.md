@@ -322,26 +322,26 @@ is to add in the required version number after the `/`.
 
 > ## Load a specific version of GCC
 > 
-> Load GCC version 8.3.1
+> Load GCC version 7.3.0
 >
 > > ## Solution
 > >
 > > ```
-> > [s1234567@gc-prd-hpclogin1 ~]$ module unload gcc/9.2.0
+> > [s1234567@gc-prd-hpclogin1 ~]$ module unload gcc
 > > ```
 > > {: .bash}
 > >
 > > ```
-> > [s1234567@gc-prd-hpclogin1 ~]$ module load gcc/8.3.1
+> > [s1234567@gc-prd-hpclogin1 ~]$ module load gcc/7.3.0
 > > [s1234567@gc-prd-hpclogin1 ~]$ gcc --version
 > > ```
 > > {: .bash}
 > > 
 > > ```
-> > gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-36)
-> > Copyright (C) 2015 Free Software Foundation, Inc.
-> > This is free software; see the source for copying conditions.  There is NO
-> > warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+> >gcc (GCC) 7.3.0
+> >Copyright (C) 2017 Free Software Foundation, Inc.
+> >This is free software; see the source for copying conditions.  There is NO
+> >warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 > > ```
 > > {: .bash}
 > > 
@@ -376,7 +376,7 @@ Type 'q()' to quit R.
 ```
 {: .bash}
 
-Then you can see which packages are avaliable
+Then you can see which packages are avaliable. Below is an example of using R to create a list of the packages.
 
 ```
 > ip <- as.data.frame(installed.packages()[, c(1, 3:4)])
@@ -522,9 +522,12 @@ To deactivate the environment
 {: .bash}
 
 ## Build your own anaconda environment
-You can create your own conda environment in your home directory but please make sure that it is not already avaliable.
+You can create your own conda environment in your home directory but please make sure that it is not already avaliable. Creating a conda environment requires internet access.
 
 ```
+# To get internet access from the cluster, run this command:
+[s1234567@gc-prd-hpclogin1 ~]$ source /usr/local/bin/s3proxy.sh
+
 # Load the require anaconda environment, i.e. 2 or 3
 [s1234567@gc-prd-hpclogin1 ~]$ module load anaconda3
 
@@ -540,10 +543,10 @@ You can create your own conda environment in your home directory but please make
 # Install the packages you would like to use
 [s1234567@gc-prd-hpclogin1 ~]$ conda install -n NameOfCondaEnv [package]
 
-# deactivate the environment
-[s1234567@gc-prd-hpclogin1 ~]$ source deactivate
+# deactivate the environment (older versions will use source deactivate)
+[s1234567@gc-prd-hpclogin1 ~]$ conda deactivate
 
 # once you have finished with it and will not be using it again you can delete it
-[s1234567@gc-prd-hpclogin1 ~]$ conda remove -n NameOfCondaEnv -all
+[s1234567@gc-prd-hpclogin1 ~]$ conda env remove -n NameOfCondaEnv
 ```
 {: .bash}

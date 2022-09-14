@@ -50,10 +50,10 @@ If possible, run a job as a small subset. Then query the HPC using "qstat -xf jo
 
 There are two general ways you can subset your job, the dataset and the computations.
 
-Examples: </br>
-Dataset - partitioning a dataset into small chunks that can be individually processed
-Computation - Using a for loop to read a large number of csv files into the HPC.
-Computation - Performing cross validation on classification or regression models.
+Examples:
+**Dataset** - partitioning a dataset into small chunks that can be individually processed
+**Computation** - Using a for loop to read a large number of csv files into the HPC.
+**Computation** - Performing cross validation on classification or regression models.
 
 Scaling up from a test run to the full dataset can get tricky if you are running your job in parallel computing. This is because the relationship between number of CPU's and processing time is not linear, its an exponential curve that slowly flattens out. We will talk about this in a later session that is dedicated to parallel computing. 
 
@@ -65,16 +65,22 @@ So its a good idea to first check the amount of usage on the HPC, it might be bu
 
 ### Check usage on the HPC nodes
 
-Sometimes the HPC is busy (especially during sememster break when researchers don't have teaching commitments), and sometimes the HPC is quiet. If you are going to submit a large job log onto the HPC and see how busy it is using the pnodes command, and the following window will appear, type q or control+C to exit.
+Sometimes the HPC is busy (especially during sememster break when researchers don't have teaching commitments), and sometimes the HPC is quiet. How do you check the current status of the cluster? On the login node, you can run a few commands to see a list of the nodes. Please note that not all nodes are available to all users. Only a subset is available.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ pnodes
+[s1234567@gc-prd-hpclogin1 ~]$ qhost
 ```
+
+This command will give an indication of teh currently available resources. 
+```
+[s1234567@gc-prd-hpclogin1 ~]$ pbsnodes -aSj
+```
+This command will give the queue configuration
+```[s1234567@gc-prd-hpclogin1 ~]$ qstat -q
+
+```
+
 {: .bash}
-
-![pnodes](../images/pnodes.png)
-
-type "q" to exit this view.
 
 You can run your job on a specific node using one of the following commands in your scheduler script.
 ```

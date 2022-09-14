@@ -44,7 +44,7 @@ Job id            Name             User              Time Use S Queue
 We can see the details of all jobs, most importantly, we can see that it is in the "R" or "RUNNING" state. It could be in "Q" or "QUEUED" state.
 
 qstat flags
-   -a Display all jobs in any status (running, queued, held)
+   -a  Display all jobs in any status (running, queued, held)
    -r Display all running or suspended jobs
    -n Display the execution hosts of the running jobs
    -i Display all queued, held or waiting jobs

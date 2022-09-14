@@ -68,7 +68,6 @@ This is followed by several bash commands (don't start with #PBS)
 >
 > {: .bash} 
 > > ## Solution
-> > <details><summary>View Solution</summary>
 > > It's missing the walltime argument which is required. Below is the script with walltime added.
 > > ```
 > > #!/bin/bash
@@ -79,7 +78,6 @@ This is followed by several bash commands (don't start with #PBS)
 > > hostname
 > > sleep 120
 > > ```
-> ></details>
 > > {: .bash}
 > > 
 > {: .solution}
