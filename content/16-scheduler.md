@@ -61,14 +61,14 @@ This is followed by several bash commands (don't start with #PBS)
 > sleep 120
 > ```
 > {: .bash}
-> <details><summary>This is the error that will be thrown</summary>
-> qsub: Job has no walltime requested
-> </details>
+> This is the error that will be thrown
 > ```
 > qsub: Job has no walltime requested
 > ```
-> {: .bash}
+>
+> {: .bash} 
 > > ## Solution
+> > <details><summary>View Solution</summary>
 > > It's missing the walltime argument which is required. Below is the script with walltime added.
 > > ```
 > > #!/bin/bash
@@ -79,6 +79,7 @@ This is followed by several bash commands (don't start with #PBS)
 > > hostname
 > > sleep 120
 > > ```
+> ></details>
 > > {: .bash}
 > > 
 > {: .solution}
