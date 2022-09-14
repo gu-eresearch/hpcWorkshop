@@ -71,13 +71,13 @@ Sometimes the HPC is busy (especially during sememster break when researchers do
 [s1234567@gc-prd-hpclogin1 ~]$ qhost
 ```
 
-This command will give an indication of teh currently available resources. 
+This command will give an indication of the currently available resources. 
 ```
 [s1234567@gc-prd-hpclogin1 ~]$ pbsnodes -aSj
 ```
 This command will give the queue configuration
-```[s1234567@gc-prd-hpclogin1 ~]$ qstat -q
-
+```
+[s1234567@gc-prd-hpclogin1 ~]$ qstat -q
 ```
 
 {: .bash}
