@@ -61,7 +61,9 @@ This is followed by several bash commands (don't start with #PBS)
 > sleep 120
 > ```
 > {: .bash}
-> This is the error that will be thrown
+> <details><summary>This is the error that will be thrown</summary>
+> qsub: Job has no walltime requested
+> </details>
 > ```
 > qsub: Job has no walltime requested
 > ```
