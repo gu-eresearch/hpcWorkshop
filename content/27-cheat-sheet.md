@@ -19,7 +19,7 @@ nav: Quick start Guide
 
 Open your prefered UNIX shell terminal (mac), gitbash (windows).
 ```
-s1234567@PC12345 XXXX~$ ssh s1234567@gc-prd-hpclogin1.rcs.griffith.edu.au
+s1234567@PC12345 XXXX~$ ssh s1234567@clogin1.rcs.griffith.edu.au
 ```
 {: .bash}
 
@@ -32,7 +32,7 @@ s1234567@PC12345 XXXX~$
 
 HPC address
 ```
-[s1234567@gc-prd-hpclogin1 ~]$
+[s1234567@clogin1.rcs.griffith.edu.au ~]$
 ```
 {: .bash}
 
@@ -41,7 +41,7 @@ HPC address
 Open your prefered UNIX shell terminal (mac), gitbash (windows) and use the scp command which takes 2 arguments the directory were you would like to move the file to and the directory you would like to move the data from. Remember, if you are moving files from your computer to the HPC, you will need to be logged into your computer.
 
 ```
-scp directory/on/local/computer/file.txt s1234567@gc-prd-hpclogin1.rcs.griffith.edu.au/~
+scp directory/on/local/computer/file.txt s1234567@clogin1.rcs.griffith.edu.au/~
 ```
 {: .bash}
 
@@ -74,29 +74,29 @@ In your command line interface, make sure your logged into the HPC, and make sur
 
 Run your job
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qsub example-job.sh
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qsub example-job.sh
 ```
 {: .bash}
 
 Get stats on your job
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qstat -x jobID
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qstat -x jobID
 ```
 {: .bash}
 OR 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qstat -u s1234567
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qstat -u s1234567
 ```
 {: .bash}
 
 Delete your job
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qdel jobID
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qdel jobID
 ```
 {: .bash}
 OR
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qdel -u s1234567
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qdel -u s1234567
 ```
 {: .bash}
 
@@ -105,7 +105,7 @@ OR
 Remember, if you are moving files to your computer from the HPC, you will need to be logged into the HPC.
 
 ```
-s1234567@PC12345 XXXX~$ scp s1234567@gc-prd-hpclogin1.rcs.griffith.edu.au/~ directory/on/local/computer/file.txt
+s1234567@PC12345 XXXX~$ scp s1234567@clogin1.rcs.griffith.edu.au/~ directory/on/local/computer/file.txt
 ```
 {: .bash}
 

@@ -8,7 +8,7 @@ nav: Running jobs
 To submit this job to the scheduler, we use the `qsub` command.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qsub example-job.sh
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qsub example-job.sh
 ```
 {: .bash}
 
@@ -27,7 +27,7 @@ And that's all we need to do to submit a job.
 To check the status of all job's, including our own, we use the command `qstat`.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qstat
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qstat
 ```
 {: .bash}
 ```
@@ -61,9 +61,9 @@ qstat flags
 > > ## Solution
 > >
 > > ```
-> > [s1234567@gc-prd-hpclogin1 ~]$ qstat -x jobID
+> > [s1234567@clogin1.rcs.griffith.edu.au ~]$ qstat -x jobID
 > >
-> > [s1234567@gc-prd-hpclogin1 ~]$ qstat -u s1234567
+> > [s1234567@clogin1.rcs.griffith.edu.au ~]$ qstat -u s1234567
 > > ```
 > > {: .bash}
 > {: .solution}
@@ -71,10 +71,10 @@ qstat flags
 
 ## Get all avaliable information about your job
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qstat -xf 49223
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qstat -xf 49223
 Job Id: 49223.gc-prd-hpcadm
     Job_Name = simple_failing_test
-    Job_Owner = s1234567@gc-prd-hpclogin1.ib0.cm.rcs.griffith.edu.au
+    Job_Owner = s1234567@clogin1.rcs.griffith.edu.au.ib0.cm.rcs.griffith.edu.au
     resources_used.cpupercent = 0
     resources_used.cput = 00:00:00
     resources_used.mem = 3548kb
@@ -86,7 +86,7 @@ Job Id: 49223.gc-prd-hpcadm
     server = gc-prd-hpcadm
     Checkpoint = u
     ctime = Wed Jun 24 15:33:18 2020
-    Error_Path = gc-prd-hpclogin1.ib0.cm.rcs.griffith.edu.au:/export/home/s1234567/simple_failing_test.e49223
+    Error_Path = clogin1.rcs.griffith.edu.au.ib0.cm.rcs.griffith.edu.au:/export/home/s1234567/simple_failing_test.e49223
     exec_host = gc-prd-hpcn001/3
     exec_vnode = (gc-prd-hpcn001:ncpus=1)
     Hold_Types = n
@@ -94,7 +94,7 @@ Job Id: 49223.gc-prd-hpcadm
     Keep_Files = n
     Mail_Points = a
     mtime = Wed Jun 24 15:34:09 2020
-    Output_Path = gc-prd-hpclogin1.ib0.cm.rcs.griffith.edu.au:/export/home/s1234567/simple_failing_test.o49223
+    Output_Path = clogin1.rcs.griffith.edu.au.ib0.cm.rcs.griffith.edu.au:/export/home/s1234567/simple_failing_test.o49223
     Priority = 0
     qtime = Wed Jun 24 15:33:18 2020
     Rerunable = True
@@ -114,7 +114,7 @@ Job Id: 49223.gc-prd-hpcadm
 	usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/c3/bin:/opt/pbs/b
 	in:/sbin:/bin:/export/home/s1234567/bin,
 	PBS_O_MAIL=/var/spool/mail/s1234567,PBS_O_QUEUE=workq,
-	PBS_O_HOST=gc-prd-hpclogin1.ib0.cm.rcs.griffith.edu.au
+	PBS_O_HOST=clogin1.rcs.griffith.edu.au.ib0.cm.rcs.griffith.edu.au
     comment = Job run at Wed Jun 24 at 15:33 on (gc-prd-hpcn001:ncpus=1) and fa
 	iled
     etime = Wed Jun 24 15:33:18 2020
@@ -131,12 +131,12 @@ Job Id: 49223.gc-prd-hpcadm
 
 Only the job owner or a system administrator with "su" or "root" privilege can place a hold on a job. The hold can be released using the qrls command.
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qhold jobID
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qhold jobID
 ```
 {: .bash}
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qrls jobID
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qrls jobID
 ```
 {: .bash}
 
@@ -147,13 +147,13 @@ This can be done with the `qdel` command.
 Let's look at how to submit a job and then delete it using its job number.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qsub example-job.sh
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qsub example-job.sh
 49230.gc-prd-hpcadm
 ```
 {: .bash}
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qstat -x 49230
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qstat -x 49230
 
 Job id            Name             User              Time Use S Queue
 ----------------  ---------------- ----------------  -------- - -----
@@ -165,8 +165,8 @@ Now delete the job with it's job number.
 Absence of any job info indicates that the job has been successfully canceled.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qdel 49230
-[s1234567@gc-prd-hpclogin1 ~]$ qstat -x 49230
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qdel 49230
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qstat -x 49230
 
 Job id            Name             User              Time Use S Queue
 ----------------  ---------------- ----------------  -------- - -----
@@ -182,7 +182,7 @@ Note that you can only delete your own jobs.
 
 Try submitting multiple jobs and then cancelling them all with
 ``` 
-[s1234567@gc-prd-hpclogin1 ~]$ qdel -u s1234567
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qdel -u s1234567
 ```
 {: .bash}
 
@@ -191,7 +191,7 @@ Try submitting multiple jobs and then cancelling them all with
 Once a job has run two new files will be created in your directory, and error and an output file. They will have the name assigned in your scheduler script under the command #PBS -N XXXX, followed by a .e1234 (error) and .o1234 (output).
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ ls
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ ls
 prime_numbers.R     primes.csv     scheduler.sh  primes.e49237  primes.e49237
 ```
 {: .bash}
@@ -199,7 +199,7 @@ prime_numbers.R     primes.csv     scheduler.sh  primes.e49237  primes.e49237
 We can look at them in our UNIX CLI using the more command.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ more primes.e49237
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ more primes.e49237
 /var/spool/pbs/mom_priv/jobs/49243.gc-prd-hpcadm.SC: line 10: d: command not found
 /var/spool/pbs/mom_priv/jobs/49243.gc-prd-hpcadm.SC: line 15: results.Rout: command not found
 ```

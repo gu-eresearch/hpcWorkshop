@@ -32,7 +32,7 @@ software version out of the equation if results are weird.
 To see available modules on the HPC, use `module avail` command. Your terminal needs to be logged into the HPC.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module avail
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module avail
 ```
 {: .bash}
 ```
@@ -98,7 +98,7 @@ If the module you require is not avaliable on the HPC then fill in <a href="http
 Intially, the statistical program R is not loaded. 
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ which R
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ which R
 ```
 {: .bash}
 ```
@@ -109,8 +109,8 @@ no R in (/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/local/bi
 Load R into your environment using the `module load` command. If you remember from the scheduler tutorial, we can add module load into the scheduler script.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module load R
-[s1234567@gc-prd-hpclogin1 ~]$ R --version
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module load R
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ R --version
 ```
 {: .bash}
 ```
@@ -129,8 +129,8 @@ https://www.gnu.org/licenses/.
 What if we want a specific version of a program? There are 2 versions of python avaliable though, 2.7.17 and 3.7.4. Lets load python 3.7.4.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module load python/3.7.4
-[s1234567@gc-prd-hpclogin1 ~]$ python --version
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module load python/3.7.4
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ python --version
 ```
 {: .bash}
 
@@ -146,7 +146,7 @@ Success!!!
 To see which modules are loaded we can run the module list command. Note this will not list packages within modules (i.e. it won't show dplyr in R or pandas in python)
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module list
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module list
 ```
 {: .bash}
 ```
@@ -156,8 +156,8 @@ Currently Loaded Modulefiles:
 {: .output}
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module load R
-[s1234567@gc-prd-hpclogin1 ~]$ module list
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module load R
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module list
 ```
 {: .bash}
 ```
@@ -170,8 +170,8 @@ So in this case, the software `R` and `python` were loaded into your HPC workspa
 Let's try unloading the `R` software.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module unload R
-[s1234567@gc-prd-hpclogin1 ~]$ module list
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module unload R
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module list
 ```
 {: .bash}
 ```
@@ -184,7 +184,7 @@ So using `module unload` "un-loads" a module along with it's dependencies.
 If we wanted to unload everything at once, we could run `module purge` (unloads everything).
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module purge
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module purge
 ```
 {: .bash}
 ```
@@ -211,7 +211,7 @@ it helps to be very specific about what software is loaded.
 Let's examine the output of `module avail` more closely.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module avail
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module avail
 ```
 {: .bash}
 ```
@@ -273,7 +273,7 @@ library/hdf5/5-1.10.5
 We can also see if there is a specific module available
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module avail R
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module avail R
 ```
 {: .bash}
 
@@ -294,7 +294,7 @@ There are three different versions avaliable on the HPC: `gcc/8.3.1`, `gcc/old/9
 How do we load each copy and which copy is the default?
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module load gcc
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module load gcc
 gcc --version
 ```
 {: .bash}
@@ -327,13 +327,13 @@ is to add in the required version number after the `/`.
 > > ## Solution
 > >
 > > ```
-> > [s1234567@gc-prd-hpclogin1 ~]$ module unload gcc
+> > [s1234567@clogin1.rcs.griffith.edu.au ~]$ module unload gcc
 > > ```
 > > {: .bash}
 > >
 > > ```
-> > [s1234567@gc-prd-hpclogin1 ~]$ module load gcc/7.3.0
-> > [s1234567@gc-prd-hpclogin1 ~]$ gcc --version
+> > [s1234567@clogin1.rcs.griffith.edu.au ~]$ module load gcc/7.3.0
+> > [s1234567@clogin1.rcs.griffith.edu.au ~]$ gcc --version
 > > ```
 > > {: .bash}
 > > 
@@ -352,9 +352,9 @@ is to add in the required version number after the `/`.
 
 First you need to load and initiate R:
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module load R
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module load R
 
-[s1234567@gc-prd-hpclogin1 ~]$ R
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ R
 
 R version 3.6.1 (2019-07-05) -- "Action of the Toes"
 Copyright (C) 2019 The R Foundation for Statistical Computing
@@ -411,17 +411,17 @@ Then quit R to get back to the terminal.
 ```
 > q()
 Save workspace image? [y/n/c]: n
-[s1234567@gc-prd-hpclogin1 ~]$
+[s1234567@clogin1.rcs.griffith.edu.au ~]$
 ```
 {: .bash}
 
-Notice that once you run R the adress changes from `[s1234567@gc-prd-hpclogin1 ~]$` to `>`, signifying that we are no longer in our home directory on the HPC, but are instead in an instance of R on the HPC.
+Notice that once you run R the adress changes from `[s1234567@clogin1.rcs.griffith.edu.au ~]$` to `>`, signifying that we are no longer in our home directory on the HPC, but are instead in an instance of R on the HPC.
 
 For python:
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module load python/3.7.4
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module load python/3.7.4
 
-[s1234567@gc-prd-hpclogin1 ~]$ python -c 'help("modules")'
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ python -c 'help("modules")'
 ```
 {: .bash}
 
@@ -458,7 +458,7 @@ There are multiple prebuilt conda environments avaliable on Griffith's HPC that 
 
 There is a python 2.x and 3.x installation of Anaconda avaliable
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module avail
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module avail
 
 anaconda2/2019.07py2
 anaconda3/2019.07py3
@@ -467,8 +467,8 @@ anaconda3/2019.07py3
 
 Load the module of interest and see what environments are avaliable
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ module load anaconda3/2019.07py3 
-[s1234567@gc-prd-hpclogin1 ~]$ conda info --envs
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module load anaconda3/2019.07py3 
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ conda info --envs
 # conda environments:
 #
 base                  *  /sw/anaconda3/2019.07
@@ -486,8 +486,8 @@ trinityENV               /sw/anaconda3/2019.07/envs/trinityENV
 
 Load the environment of interest and check the packages and versions avaliable
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ source activate bioinformatics
-(bioinformatics) [s1234567@gc-prd-hpclogin1 ~]$ conda list
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ source activate bioinformatics
+(bioinformatics) [s1234567@clogin1.rcs.griffith.edu.au ~]$ conda list
 
 # packages in environment at /sw/anaconda3/2019.07/envs/bioinformatics:
 #
@@ -517,7 +517,7 @@ curl                      7.68.0               hbc83047_0
 
 To deactivate the environment
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ conda deactivate
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ conda deactivate
 ```
 {: .bash}
 
@@ -526,27 +526,27 @@ You can create your own conda environment in your home directory but please make
 
 ```
 # To get internet access from the cluster, run this command:
-[s1234567@gc-prd-hpclogin1 ~]$ source /usr/local/bin/s3proxy.sh
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ source /usr/local/bin/s3proxy.sh
 
 # Load the require anaconda environment, i.e. 2 or 3
-[s1234567@gc-prd-hpclogin1 ~]$ module load anaconda3
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ module load anaconda3
 
 # create a new conda environment using the create command. Use the -n flag to give it a name, and tell it the version of python and anaconda to create the environment with
-[s1234567@gc-prd-hpclogin1 ~]$ conda create -n NameOfCondaEnv python=X.X anacondaX
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ conda create -n NameOfCondaEnv python=X.X anacondaX
 
 # There will now be a new conda environment with that name 
-[s1234567@gc-prd-hpclogin1 ~]$ conda info --envs
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ conda info --envs
 
 # activate the environment
-[s1234567@gc-prd-hpclogin1 ~]$ source activate NameOfCondaEnv
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ source activate NameOfCondaEnv
 
 # Install the packages you would like to use
-[s1234567@gc-prd-hpclogin1 ~]$ conda install -n NameOfCondaEnv [package]
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ conda install -n NameOfCondaEnv [package]
 
 # deactivate the environment (older versions will use source deactivate)
-[s1234567@gc-prd-hpclogin1 ~]$ conda deactivate
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ conda deactivate
 
 # once you have finished with it and will not be using it again you can delete it
-[s1234567@gc-prd-hpclogin1 ~]$ conda env remove -n NameOfCondaEnv
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ conda env remove -n NameOfCondaEnv
 ```
 {: .bash}

@@ -68,16 +68,16 @@ So its a good idea to first check the amount of usage on the HPC, it might be bu
 Sometimes the HPC is busy (especially during sememster break when researchers don't have teaching commitments), and sometimes the HPC is quiet. How do you check the current status of the cluster? On the login node, you can run a few commands to see a list of the nodes. Please note that not all nodes are available to all users. Only a subset is available.
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qhost
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qhost
 ```
 
 This command will give an indication of the currently available resources. 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ pbsnodes -aSj
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ pbsnodes -aSj
 ```
 This command will give the queue configuration
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ qstat -q
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ qstat -q
 ```
 
 {: .bash}

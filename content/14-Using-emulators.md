@@ -36,7 +36,7 @@ Click Add button
 
 ![putty3](../images/putty2.JPG)
 
-Click on Sessions on the left pane and Enter for host name: gc-prd-hpclogin1.rcs.griffith.edu.au
+Click on Sessions on the left pane and Enter for host name: clogin1.rcs.griffith.edu.au
 And for saved session type a name that reminds you of which HPC it is (can be anything alphanumeric, NO spaces). Double click or select Open to connect to the HPC.
 
 ![putty4](../images/putty3.JPG)
@@ -56,7 +56,7 @@ Click on "new"
 
 ![winscp1](../images/winscp1.JPG)
 
-For the hostname, type: "gc-prd-hpclogin1.rcs.griffith.edu.au"
+For the hostname, type: "clogin1.rcs.griffith.edu.au"
 User name: yours sNumber
 Password: Leave it blank for now
 

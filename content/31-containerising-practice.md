@@ -191,29 +191,29 @@ pd.DataFrame(df).to_csv('python_primes.csv')
 > > Copy the 
 > > 
 > > ```
-> > s1234567@PC12345 XXXX~$ scp -r directory/on/local/computer/ s1234567@gc-prd-hpclogin1.rcs.griffith.edu.au:~ 
+> > s1234567@PC12345 XXXX~$ scp -r directory/on/local/computer/ s1234567@clogin1.rcs.griffith.edu.au:~ 
 > > ```
 > > {: .bash}
 > > 
 > > Log into the HPC
 > > 
 > > ```
-> > s1234567@PC12345 XXXX~$ ssh s1234567@gc-prd-hpclogin1.rcs.griffith.edu.au
+> > s1234567@PC12345 XXXX~$ ssh s1234567@clogin1.rcs.griffith.edu.au
 > > 
-> > [s1234567@gc-prd-hpclogin1 ~]$
+> > [s1234567@clogin1.rcs.griffith.edu.au ~]$
 > > ```
 > > {: .bash}
 > > 
 > > Check that you are in your working directory, then list the files that are there. Make sure that the files from the previous step are there.
 > > 
 > > ```
-> > [s1234567@gc-prd-hpclogin1 ~]$ ls
+> > [s1234567@clogin1.rcs.griffith.edu.au ~]$ ls
 > > prime_numbers.py   scheduler.sh
 > > ```
 > > {: .bash}
 > > Run the job
 > > ```
-> > [s1234567@gc-prd-hpclogin1 ~]$ qsub scheduler.sh
+> > [s1234567@clogin1.rcs.griffith.edu.au ~]$ qsub scheduler.sh
 > > 49243.gc-prd-hpcadm
 > > ```
 > > {: .bash}

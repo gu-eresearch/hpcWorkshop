@@ -22,8 +22,8 @@ The second is using <a href="https://docs.docker.com/get-started/overview/" targ
 
 Before building or pulling images have a look on the Griffith HPC as there are a number of singularity images already avaliable. You will need to log into the HPC and navigate to the directory where singularity images are stored. The fiels that end in .sif are the latest singularity images, files that end in .simg are the older style of singularity images, and .img are docker images, they need to get converted to .sif.
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ cd /sw/Containers/singularity/images
-[s1234567@gc-prd-hpclogin1 images]$ ls
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ cd /sw/Containers/singularity/images
+[s1234567@clogin1.rcs.griffith.edu.au images]$ ls
 centos7.img           installNotes.txt                 singularity-firefox_latest.sif  Ubuntu2.img                   xbeach_latest.sif
 chrome_latest.sif     MitoZ.simg                       swan_latest.sif                 ubuntu.img
 delft3d4_latest.sif   nanodock.sif                     test-image_latest.sif           ubuntu-writable-yade.simg
@@ -486,7 +486,7 @@ Create a new directory on your HPC account "containerTut"
 
 Copy sif script and data to the hpc. You can copy multiple objects at once by surrounding them in ""
 ```
-nane@name-VirtualBox:~$ scp "directory/on/local/computer/pythonContainer.sif directory/on/local/computer/pythonFile.py"  s1234567@gc-prd-hpclogin1.rcs.griffith.edu.au:~/containerTut
+nane@name-VirtualBox:~$ scp "directory/on/local/computer/pythonContainer.sif directory/on/local/computer/pythonFile.py"  s1234567@clogin1.rcs.griffith.edu.au:~/containerTut
 ```
 {: .bash}
 
@@ -495,11 +495,11 @@ In the HPC, cd into the directory with the singularity data. You should have a s
 Now you can sumbit your singularity image file to the HPC to process
 
 ```
-[s1234567@gc-prd-hpclogin1 ~]$ cd ./containerTut
+[s1234567@clogin1.rcs.griffith.edu.au ~]$ cd ./containerTut
 
-[s1234567@gc-prd-hpclogin1 containerTut]$ qsub scheduler.sh
+[s1234567@clogin1.rcs.griffith.edu.au containerTut]$ qsub scheduler.sh
 
-[s1234567@gc-prd-hpclogin1 containerTut]$ ls
+[s1234567@clogin1.rcs.griffith.edu.au containerTut]$ ls
 pythonContainer.sif        TestContainer.o81400
 pythonCont.sh      pythonFile.py           python_primes.csv    TestContainer.e81400
 
